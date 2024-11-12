@@ -1,38 +1,209 @@
 import React from "react";
+import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <>
-      <footer className="bg-black text-white md:py-3 lg:py-3 py-1 bottom-0 fixed  w-full">
-        <div className="container mx-auto px-4 ">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0 flex text-center">
-              <p className="text-sm text-center">
-                © 2024 FixmyBug. All rights reserved.
-              </p>
-            </div>
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          {/* Product Column */}
+          <FooterColumn
+            title="Product"
+            items={[
+              { label: "Apply for a fix", link: "/RequestFix" },
+              { label: "Part Time BugFixer", link: "/signup-partTime" },
+              { label: "Full Time BugFixer", link: "/signup-fullTime" },
+              { label: "About us", link: "/about-us" },
+              { label: "Contact us", link: "/contact-us" },
+              { label: "Career", link: "/signup-partTime" },
+              { label: "Webinars", link: "#" },
+              { label: "Orientations", link: "#" },
+              { label: "AI Chatbot", link: "#" },
+              { label: "Collaboration", link: "#" },
+              { label: "Analytics", link: "/signup-partTime" },
+              { label: "Buisiness Affiliates", link: "#" },
+            ]}
+          />
 
-            {/* <div className="flex space-x-4 mt-4 md:mt-0">
-              <a
-                href="https://www.linkedin.com/in/-savyagupta"
-                target="blank"
-                className="hover:text-gray-400"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20.447 20.452H16.85v-5.569c0-1.327-.027-3.037-1.852-3.037-1.854 0-2.137 1.446-2.137 2.94v5.666H9.147V9.756h3.448v1.464h.05c.48-.91 1.653-1.871 3.401-1.871 3.634 0 4.307 2.39 4.307 5.498v5.605zM5.337 8.29c-1.105 0-2-.896-2-2 0-1.106.895-2 2-2 1.104 0 2 .895 2 2 0 1.104-.896 2-2 2zM7.119 20.452H3.553V9.756h3.566v10.696zM22.225 0H1.771C.791 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451c.979 0 1.771-.774 1.771-1.729V1.729C24 .774 23.205 0 22.225 0z" />
-                </svg>
-              </a>
-            </div> */}
-          </div>
+          <FooterColumn
+            title="FixmyBug for"
+            items={[
+              { label: "Enterprise", link: "#" },
+              { label: "Small Business", link: "#" },
+              { label: "Creative Professionals", link: "#" },
+              { label: "Educators", link: "#" },
+              { label: "Marketers", link: "#" },
+              { label: "Corporate Comms", link: "#" },
+              { label: "Learning and Development", link: "#" },
+              { label: "Healthcare", link: "#" },
+              { label: "Retail", link: "#" },
+              { label: "Financial Services", link: "#" },
+            ]}
+          />
+
+          {/* Solutions Column */}
+          <FooterColumn
+            title="Solutions"
+            items={[
+              { label: "FixmyBug Central", link: "#" },
+              { label: "FixmyBug Marketing", link: "#" },
+            ]}
+          />
+
+          {/* Resources Column */}
+          <FooterColumn
+            title="Resources"
+            items={[
+              { label: "Help Center", link: "Contact-us" },
+              { label: "Contact Support", link: "/Contact-us" },
+              { label: "Customer Stories", link: "#" },
+              { label: "Events & Webinars", link: "#" },
+              { label: "Blog", link: "#" },
+              { label: "Developers", link: "#" },
+              { label: "Guidelines", link: "#" },
+              { label: "FixmyBug Experts", link: "#" },
+              { label: "Watch", link: "#" },
+              { label: "Media Kit", link: "#" },
+              { label: "Integrations Hub", link: "#" },
+            ]}
+          />
+
+          {/* Company Column */}
+          <FooterColumn
+            title="Company"
+            items={[
+              { label: "About FixmyBug", link: "#" },
+              { label: "Careers", link: "#" },
+              { label: "Culture", link: "#" },
+              { label: "Investor Relations", link: "#" },
+              { label: "Product News", link: "#" },
+              { label: "Site Maps", link: "#" },
+            ]}
+          />
+
+          <FooterColumn
+            title="Leadership and Governance"
+            items={[
+              { label: "Leadership", link: "#" },
+              { label: "Board of Directors", link: "#" },
+              { label: "Awards and Recognition", link: "#" },
+              { label: "Partnerships", link: "#" },
+              { label: "Community Engagement", link: "#" },
+              { label: "Sustainability", link: "#" },
+            ]}
+          />
+
+          <FooterColumn
+            title="Company Overview"
+            items={[
+              { label: "History", link: "#" },
+              { label: "Milestones", link: "#" },
+              { label: "Founding Principles", link: "#" },
+              { label: "Company Structure", link: "#" },
+              { label: "Global Presence", link: "#" },
+              { label: "Industry Recognition", link: "#" },
+            ]}
+          />
+
+          <FooterColumn
+            title="Financial Information"
+            items={[
+              { label: "Financial Reports", link: "#" },
+              { label: "Annual Reports", link: "#" },
+              { label: "Stock Information", link: "#" },
+              { label: "IR Calendar", link: "#" },
+              { label: "SEC Filings", link: "#" },
+              {
+                label: "Contact Investor Relations",
+                link: "#",
+              },
+            ]}
+          />
         </div>
-      </footer>
-    </>
+
+        {/* Social Media Links */}
+        <SocialLinks />
+
+        {/* Language Selection */}
+        <LanguageSelector />
+
+        {/* Copyright Information */}
+        <CopyrightInfo />
+      </div>
+    </footer>
   );
 };
+
+const FooterColumn = ({ title, items }) => (
+  <div className="">
+    <h3 className="text-white text-lg font-bold mb-4 ">{title}</h3>
+    <ul className="space-y-2">
+      {items.map((item, index) => (
+        <li key={index}>
+          <a
+            href={item.link}
+            className="hover:text-blue-500 transition-colors duration-200"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const SocialLinks = () => (
+  <div className="flex justify-between items-center mt-8 border-t border-gray-700 pt-4">
+    <div className="space-x-4 flex">
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaInstagram className="text-2xl hover:text-blue-500 transition-colors duration-200" />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaTwitter className="text-2xl hover:text-blue-500 transition-colors duration-200" />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaFacebook className="text-2xl hover:text-blue-500 transition-colors duration-200" />
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin className="text-2xl hover:text-blue-500 transition-colors duration-200" />
+      </a>
+    </div>
+  </div>
+);
+
+const LanguageSelector = () => (
+  <div className="flex justify-between items-center mt-4 space-x-2">
+    <label htmlFor="language" className="text-sm">
+      Language:
+    </label>
+    <select id="language" className="bg-gray-800 text-white border-none">
+      <option value="">English</option>
+      {/* Add more languages as needed */}
+    </select>
+  </div>
+);
+
+const CopyrightInfo = () => (
+  <div className="mt-8 text-sm text-center">
+    <p>&copy; 2024 FixmyBug.com, Inc. All rights reserved.</p>
+    <div className="space-x-2 flex flex-wrap mt-4">
+      <a href="#" className="hover:underline">
+        Terms
+      </a>
+      <a href="#" className="hover:underline">
+        Privacy
+      </a>
+      <a href="#" className="hover:underline">
+        U.S. State Privacy
+      </a>
+      <a href="#" className="hover:underline">
+        Copyright
+      </a>
+      <a href="#" className="hover:underline">
+        Cookies
+      </a>
+    </div>
+  </div>
+);
 
 export default Footer;

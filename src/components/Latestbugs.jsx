@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBug,
@@ -6,9 +6,71 @@ import {
   faUser,
   faFlag,
 } from "@fortawesome/free-solid-svg-icons";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Latestbugs = () => {
-  // Data for each bug fix with additional properties
+  // Function to determine the number of slides based on window width
+  const getSlidesToShow = () => {
+    const width = window.innerWidth;
+    if (width >= 1200) return 6;
+    if (width >= 992) return 4;
+    if (width >= 768) return 3;
+    if (width >= 576) return 2;
+    return 1;
+  };
+
+  // State to store the current number of slides to show
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesToShow(getSlidesToShow());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
+  };
   const bugsData = [
     {
       id: 1,
@@ -19,51 +81,51 @@ const Latestbugs = () => {
       date: "2024-08-7",
       developer: "Savya gupta",
       priority: "Low",
-      imageFileName: "keyncoders.png",
+      imageFileName: "keyncoders.webp",
     },
     {
       id: 2,
-      company: "Ashmith Kapoor",
+      company: "Raghav",
       description: "Improved page load times by optimizing images.",
       details: "Optimized image formats and lazy loading.",
       difficulty: "Medium",
       date: "2024-09-2",
       developer: "Savya gupta",
       priority: "High",
-      imageFileName: "ash.png",
+      imageFileName: "keyncoders.webp",
     },
     {
       id: 3,
-      company: "Aakash ",
+      company: "Rohit",
       description: "Addressed bug causing incorrect data to display.",
       details: "Rewrote data fetching logic and improved validations.",
       difficulty: "Hard",
       date: "2024-09-05",
       developer: "Savya gupta",
       priority: "Medium",
-      imageFileName: "aakash.jpg",
+      imageFileName: "keyncoders.webp",
     },
     {
       id: 4,
-      company: "Snehil Singh",
+      company: "Anonymous",
       description: "Fixed payment gateway timeout issue.",
       details: "Implemented retries and error handling for the gateway.",
       difficulty: "Medium",
       date: "2024-09-12",
-      developer: "Savya gupta",
+      developer: "Sidhrath Verma",
       priority: "High",
-      imageFileName: "snehil.jpg",
+      imageFileName: "keyncoders.webp",
     },
     {
       id: 5,
-      company: "Raghav sharma",
+      company: "Mehul Dharak",
       description: "Responsive issues",
       details: "Resolved by updating authentication methods.",
       difficulty: "Easy",
       date: "2024-09-15",
       developer: "Savya gupta",
       priority: "Low",
-      imageFileName: "raghav.jpg",
+      imageFileName: "keyncoders.webp",
     },
     {
       id: 6,
@@ -72,31 +134,31 @@ const Latestbugs = () => {
       details: "Optimized image formats and lazy loading.",
       difficulty: "Medium",
       date: "2024-09-16",
-      developer: "Savya gupta",
+      developer: "Virinchi Edukula",
       priority: "Medium",
-      imageFileName: "keyncoders.png",
+      imageFileName: "keyncoders.webp",
     },
-    {
-      id: 7,
-      company: "Keshav hurkat",
-      description: "api endpoints",
-      details: "Rewrote data fetching logic and improved validations.",
-      difficulty: "Hard",
-      date: "2024-09-17",
-      developer: "Savya gupta",
-      priority: "High",
-      imageFileName: "keyncoders.png",
-    },
+    // {
+    //   id: 7,
+    //   company: "Keshav hurkat",
+    //   description: "api endpoints",
+    //   details: "Rewrote data fetching logic and improved validations.",
+    //   difficulty: "Hard",
+    //   date: "2024-09-17",
+    //   developer: "Savya gupta",
+    //   priority: "High",
+    //   imageFileName: "keyncoders.webp",
+    // },
     {
       id: 8,
-      company: "Ashmith kapoor",
+      company: "Arpita",
       description: "Video Streaming",
       details: "Implemented retries and error handling for the gateway.",
       difficulty: "Easy",
       date: "2024-09-20",
       developer: "Savya gupta",
       priority: "High",
-      imageFileName: "ash.png",
+      imageFileName: "keyncoders.webp",
     },
   ];
 
@@ -166,87 +228,60 @@ const Latestbugs = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto mb-20 overflow-hidden ">
-      <h1 className="text-4xl font-bold text-center">
-        <span className="text-[#6A38C2]">Recent</span> BugFixes
+    <div className="text-center bg-[#E6E6E6] overflow-hidden">
+      <h1 className="text-5xl lg:mt-20 mb-10 font-bold">
+        <span className="text-[#0c4a6e]">Recent</span> BugFixes
       </h1>
-
-      {/* Grid layout for all cards */}
-      <div className="grid grid-cols-1 mx-auto justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  sm:justify-items-center sm:ml-16">
-        {bugsData.map((bug) => (
-          <div
-            key={bug.id}
-            className="card mx-auto"
-            style={cardStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.querySelector(".front").style.transform =
-                "rotateY(180deg)";
-              e.currentTarget.querySelector(".back").style.transform =
-                "rotateY(0deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.querySelector(".front").style.transform =
-                "rotateY(0deg)";
-              e.currentTarget.querySelector(".back").style.transform =
-                "rotateY(-180deg)";
-            }}
-          >
-            {/* Front side of the card */}
+      <div className="mb-10 px-10 overflow-hidden">
+        <Slider {...sliderSettings}>
+          {bugsData.map((bug) => (
             <div
-              className="card-side front  sm:m-0 mx-[2rem]"
-              style={frontSideStyle}
+              key={bug.id}
+              className="p-5 bg-white max-w-[15rem] min-w-4 w-full"
             >
-              <div className="flex items-center mb-4">
-                <FontAwesomeIcon
-                  icon={faBug}
-                  className="h-12 w-12 text-[#6A38C2] mr-3"
+              <div className="card">
+                <div className="flex items-center mb-4">
+                  <FontAwesomeIcon
+                    icon={faBug}
+                    className="h-12 w-12 text-[#0c4a6e] mr-3"
+                  />
+                  <h2 className="text-xl font-bold text-black">
+                    {bug.company}
+                  </h2>
+                </div>
+                <p className="text-gray-700">{bug.description}</p>
+                <span
+                  className={`inline-block mt-3 px-3 py-1 rounded-full text-sm font-semibold ${getTagStyle(
+                    bug.difficulty
+                  )}`}
+                >
+                  {bug.difficulty}
+                </span>
+                <div className="mt-2 flex items-center text-gray-600">
+                  <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+                  <p>{bug.date}</p>
+                </div>
+                <div className="flex items-center text-gray-600 mt-1">
+                  <FontAwesomeIcon icon={faUser} className="mr-2" />
+                  <p>{bug.developer}</p>
+                </div>
+                <div
+                  className={`flex items-center mt-1 ${getPriorityStyle(
+                    bug.priority
+                  )}`}
+                >
+                  <FontAwesomeIcon icon={faFlag} className="mr-2" />
+                  <p>{bug.priority} Priority</p>
+                </div>
+                <img
+                  src={`../Images/${bug.imageFileName}`}
+                  alt={`Bug Fix ${bug.id}`}
+                  className="h-full object-contain rounded-lg mt-4"
                 />
-                <h2 className="text-xl font-bold text-black">{bug.company}</h2>
-              </div>
-              <p className="text-gray-700">{bug.description}</p>
-
-              {/* Difficulty Tag */}
-              <span
-                className={`inline-block mt-3 px-3 py-1 rounded-full text-sm font-semibold ${getTagStyle(
-                  bug.difficulty
-                )}`}
-              >
-                {bug.difficulty}
-              </span>
-
-              {/* Bug Date */}
-              <div className="mt-2 flex items-center text-gray-600">
-                <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
-                <p>{bug.date}</p>
-              </div>
-
-              {/* Developer Assigned */}
-              <div className="flex items-center text-gray-600 mt-1">
-                <FontAwesomeIcon icon={faUser} className="mr-2" />
-                <p>{bug.developer}</p>
-              </div>
-
-              {/* Priority */}
-              <div
-                className={`flex items-center mt-1 ${getPriorityStyle(
-                  bug.priority
-                )}`}
-              >
-                <FontAwesomeIcon icon={faFlag} className="mr-2" />
-                <p>{bug.priority} Priority</p>
               </div>
             </div>
-
-            {/* Back side of the card */}
-            <div className="card-side back" style={backSideStyle}>
-              <img
-                src={`../Images/${bug.imageFileName}`}
-                alt={`Bug Fix ${bug.id}`}
-                className="w-full h-full object-contain rounded-lg"
-              />
-            </div>
-          </div>
-        ))}
+          ))}
+        </Slider>
       </div>
     </div>
   );

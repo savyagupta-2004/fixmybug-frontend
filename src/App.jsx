@@ -1,10 +1,22 @@
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
-
 import Home from "./components/Home";
-
 import Requestfix from "./components/Requestfix";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Signup from "./components/shared/Signup";
+import TermsosService from "./components/ui/TermsosService";
+import Aboutus from "./components/Aboutus";
+import Contactus from "./components/Contactus";
+import Confirmation from "./components/ui/Confirmation";
+import Landing_part from "./components/postlogin/Landing_part";
+import Login from "./components/shared/Login";
+import Signupform1 from "./components/shared/Signupform1";
+import Signupform2 from "./components/shared/Signupform2";
+import Chat from "./components/Stackoverflow/Main";
+import Postlogin_bugfixee from "./components/postlogin/Postlogin_bugfixee";
+import UserDetails from "./components/postlogin/UserDetails";
+import Blog from "./components/blog/Blog";
+import SignUp from "./components/contract/SignUp";
 
 // const appRouter = createBrowserRouter([
 //   {
@@ -130,12 +142,39 @@ function App() {
       <div>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home notify={notify} />} />
 
             <Route
               path="/RequestFix"
               element={<Requestfix notify={notify} />}
             />
+            <Route
+              path="/signup-partTime"
+              element={<Signupform1 notify={notify} />}
+            />
+            <Route
+              path="/signup-fullTime"
+              element={<Signupform2 notify={notify} />}
+            />
+            <Route path="/terms" element={<TermsosService notify={notify} />} />
+            <Route path="/about-us" element={<Aboutus notify={notify} />} />
+            <Route path="/contact-us" element={<Contactus notify={notify} />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+            <Route
+              path="/postlogin-part"
+              element={<Landing_part notify={notify} />}
+            />
+            <Route path="/login" element={<Login notify={notify} />} />
+            <Route path="/Chat" element={<Chat notify={notify} />} />
+            <Route
+              path="/postlogin"
+              element={<Postlogin_bugfixee notify={notify} />}
+            />
+            <Route
+              path="/user/:email"
+              element={<UserDetails notify={notify} />}
+            />
+            <Route path="/blog" element={<Blog></Blog>} />
           </Routes>
         </BrowserRouter>
       </div>
