@@ -11,7 +11,7 @@ const ApplyForFix = () => {
     navigate("/signup-partTime");
   };
   const handlenavigatesign1 = () => {
-    navigate("/chat");
+    navigate("/contact-us");
   };
   const handlenavigatesblog = () => {
     navigate("/blog");

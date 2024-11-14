@@ -9,7 +9,7 @@ const Aboutus = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className=" mt-16 text-white bg-[#d6e9e7] py-20 text-center relative overflow-hidden">
+      <section className=" mt-16 text-white bg-black py-20 text-center relative overflow-hidden">
         <img
           src="../Images/office.webp"
           alt="Office Building"

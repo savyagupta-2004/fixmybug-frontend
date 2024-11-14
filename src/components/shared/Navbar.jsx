@@ -143,7 +143,7 @@ const Navbar = () => {
             About us
           </Link>
           <Link
-            to="/Chat"
+            to="/soon"
             className={`text-base font-medium text-black hover:text-[#0c4a6e] transition-colors duration-300 ${
               location.pathname === "/Chat"
                 ? "border-b-2 border-[#0c4a6e] pb-1"
@@ -276,7 +276,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/Chat"
+                to="/soon"
                 className="text-base font-medium text-black bg-white px-3 py-1 w-full block"
                 onClick={toggleSidebar}
               >

@@ -10,6 +10,7 @@ import Contactus from "./components/Contactus";
 import Confirmation from "./components/ui/Confirmation";
 import Landing_part from "./components/postlogin/Landing_part";
 import Login from "./components/shared/Login";
+import CommingSoon from "./components/shared/CommingSoon";
 import Signupform1 from "./components/shared/Signupform1";
 import Signupform2 from "./components/shared/Signupform2";
 import Chat from "./components/Stackoverflow/Main";
@@ -165,7 +166,7 @@ function App() {
               element={<Landing_part notify={notify} />}
             />
             <Route path="/login" element={<Login notify={notify} />} />
-            <Route path="/Chat" element={<Chat notify={notify} />} />
+            {/* <Route path="/Chat" element={<Chat notify={notify} />} /> */}
             <Route
               path="/postlogin"
               element={<Postlogin_bugfixee notify={notify} />}
@@ -175,6 +176,10 @@ function App() {
               element={<UserDetails notify={notify} />}
             />
             <Route path="/blog" element={<Blog></Blog>} />
+            <Route
+              path="/soon"
+              element={<CommingSoon notify={notify}></CommingSoon>}
+            />
           </Routes>
         </BrowserRouter>
       </div>

@@ -9,7 +9,7 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-// Simplified ()=>{notify function to show one common message
+
 function ProfileCard(props) {
   const notify = (message, type = "default") => {
     toast(message, {
@@ -24,8 +24,10 @@ function ProfileCard(props) {
       className: "custom-toast",
     });
   };
+
   const [isFollowing, setIsFollowing] = useState(false);
   const navigate = useNavigate();
+
   // Load follow status from local storage on component mount
   useEffect(() => {
     const storedStatus = localStorage.getItem(`followStatus-${props.name}`);
@@ -46,7 +48,7 @@ function ProfileCard(props) {
 
   // To view personal insights, you have to Hire me as your BugFixer
   const handlenavigate = () => {
-    navigate("/chat");
+    navigate("/contact-us");
   };
 
   return (
@@ -78,18 +80,17 @@ function ProfileCard(props) {
       }
     `}</style>
 
-      <div className="flex max-w-3xl mx-auto bg-[#e6e6e6] rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105">
+      <div className="flex flex-col sm:flex-row max-w-3xl mx-auto bg-white p-5 rounded-lg shadow-md overflow-hidden transition duration-500 hover:scale-105">
         {/* Left section with the image */}
         <div
-          className="w-1/3 bg-cover bg-center"
+          className="w-full sm:w-1/3 bg-cover bg-center rounded-2xl sm:min-h-[200px]"
           style={{
             backgroundImage: `url(${props.image})`,
-            minHeight: "200px",
           }}
         ></div>
 
         {/* Right section with content */}
-        <div className="w-2/3 p-6 text-left flex flex-col justify-between">
+        <div className="w-full sm:w-2/3 p-6 text-left flex flex-col justify-between">
           <div>
             <h1 className="text-2xl font-semibold text-gray-800">
               {props.name}
@@ -99,7 +100,7 @@ function ProfileCard(props) {
               {props.role}
             </p>
 
-            <div className="flex mt-4 space-x-4">
+            <div className="flex flex-col sm:flex-row mt-4 space-y-4 sm:space-y-0 sm:space-x-4">
               <button
                 onClick={handlenavigate}
                 className="px-5 py-2 bg-indigo-600 text-white font-semibold rounded-full hover:bg-indigo-700 transition"
@@ -124,7 +125,7 @@ function ProfileCard(props) {
             <FaLinkedin
               onClick={() => {
                 notify(
-                  " To view personal insights, you have to Hire me as your BugFixer"
+                  "To view personal insights, you have to Hire me as your BugFixer"
                 );
               }}
               className="text-2xl hover:text-blue-600 transition cursor-pointer"
@@ -132,7 +133,7 @@ function ProfileCard(props) {
             <FaTwitter
               onClick={() => {
                 notify(
-                  " To view personal insights, you have to Hire me as your BugFixer"
+                  "To view personal insights, you have to Hire me as your BugFixer"
                 );
               }}
               className="text-2xl hover:text-blue-400 transition cursor-pointer"
@@ -140,7 +141,7 @@ function ProfileCard(props) {
             <FaGithub
               onClick={() => {
                 notify(
-                  " To view personal insights, you have to Hire me as your BugFixer"
+                  "To view personal insights, you have to Hire me as your BugFixer"
                 );
               }}
               className="text-2xl hover:text-gray-800 transition cursor-pointer"
@@ -148,7 +149,7 @@ function ProfileCard(props) {
             <FaYoutube
               onClick={() => {
                 notify(
-                  " To view personal insights, you have to Hire me as your BugFixer"
+                  "To view personal insights, you have to Hire me as your BugFixer"
                 );
               }}
               className="text-2xl hover:text-red-500 transition cursor-pointer"
@@ -156,7 +157,7 @@ function ProfileCard(props) {
             <FaInstagram
               onClick={() => {
                 notify(
-                  " To view personal insights, you have to Hire me as your BugFixer"
+                  "To view personal insights, you have to Hire me as your BugFixer"
                 );
               }}
               className="text-2xl hover:text-pink-500 transition cursor-pointer"

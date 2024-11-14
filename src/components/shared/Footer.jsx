@@ -1,7 +1,8 @@
 import React from "react";
 import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
-
+import { Link, useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="container mx-auto px-6">
@@ -16,28 +17,28 @@ const Footer = () => {
               { label: "About us", link: "/about-us" },
               { label: "Contact us", link: "/contact-us" },
               { label: "Career", link: "/signup-partTime" },
-              { label: "Webinars", link: "#" },
-              { label: "Orientations", link: "#" },
-              { label: "AI Chatbot", link: "#" },
-              { label: "Collaboration", link: "#" },
+              { label: "Webinars", link: "/soon" },
+              { label: "Orientations", link: "soon" },
+              { label: "AI Chatbot", link: "soon" },
+              { label: "Collaboration", link: "soon" },
               { label: "Analytics", link: "/signup-partTime" },
-              { label: "Buisiness Affiliates", link: "#" },
+              { label: "Buisiness Affiliates", link: "soon" },
             ]}
           />
 
           <FooterColumn
             title="FixmyBug for"
             items={[
-              { label: "Enterprise", link: "#" },
-              { label: "Small Business", link: "#" },
-              { label: "Creative Professionals", link: "#" },
-              { label: "Educators", link: "#" },
-              { label: "Marketers", link: "#" },
-              { label: "Corporate Comms", link: "#" },
-              { label: "Learning and Development", link: "#" },
-              { label: "Healthcare", link: "#" },
-              { label: "Retail", link: "#" },
-              { label: "Financial Services", link: "#" },
+              { label: "Enterprise", link: "soon" },
+              { label: "Small Business", link: "soon" },
+              { label: "Creative Professionals", link: "soon" },
+              { label: "Educators", link: "soon" },
+              { label: "Marketers", link: "soon" },
+              { label: "Corporate Comms", link: "soon" },
+              { label: "Learning and Development", link: "soon" },
+              { label: "Healthcare", link: "soon" },
+              { label: "Retail", link: "soon" },
+              { label: "Financial Services", link: "soon" },
             ]}
           />
 
@@ -45,8 +46,8 @@ const Footer = () => {
           <FooterColumn
             title="Solutions"
             items={[
-              { label: "FixmyBug Central", link: "#" },
-              { label: "FixmyBug Marketing", link: "#" },
+              { label: "FixmyBug Central", link: "soon" },
+              { label: "FixmyBug Marketing", link: "soon" },
             ]}
           />
 
@@ -56,15 +57,15 @@ const Footer = () => {
             items={[
               { label: "Help Center", link: "Contact-us" },
               { label: "Contact Support", link: "/Contact-us" },
-              { label: "Customer Stories", link: "#" },
-              { label: "Events & Webinars", link: "#" },
-              { label: "Blog", link: "#" },
-              { label: "Developers", link: "#" },
-              { label: "Guidelines", link: "#" },
-              { label: "FixmyBug Experts", link: "#" },
-              { label: "Watch", link: "#" },
-              { label: "Media Kit", link: "#" },
-              { label: "Integrations Hub", link: "#" },
+              { label: "Customer Stories", link: "soon" },
+              { label: "Events & Webinars", link: "soon" },
+              { label: "Blog", link: "soon" },
+              { label: "Developers", link: "soon" },
+              { label: "Guidelines", link: "soon" },
+              { label: "FixmyBug Experts", link: "soon" },
+              { label: "Watch", link: "soon" },
+              { label: "Media Kit", link: "soon" },
+              { label: "Integrations Hub", link: "soon" },
             ]}
           />
 
@@ -72,50 +73,50 @@ const Footer = () => {
           <FooterColumn
             title="Company"
             items={[
-              { label: "About FixmyBug", link: "#" },
-              { label: "Careers", link: "#" },
-              { label: "Culture", link: "#" },
-              { label: "Investor Relations", link: "#" },
-              { label: "Product News", link: "#" },
-              { label: "Site Maps", link: "#" },
+              { label: "About FixmyBug", link: "soon" },
+              { label: "Careers", link: "soon" },
+              { label: "Culture", link: "soon" },
+              { label: "Investor Relations", link: "soon" },
+              { label: "Product News", link: "soon" },
+              { label: "Site Maps", link: "soon" },
             ]}
           />
 
           <FooterColumn
             title="Leadership and Governance"
             items={[
-              { label: "Leadership", link: "#" },
-              { label: "Board of Directors", link: "#" },
-              { label: "Awards and Recognition", link: "#" },
-              { label: "Partnerships", link: "#" },
-              { label: "Community Engagement", link: "#" },
-              { label: "Sustainability", link: "#" },
+              { label: "Leadership", link: "soon" },
+              { label: "Board of Directors", link: "soon" },
+              { label: "Awards and Recognition", link: "soon" },
+              { label: "Partnerships", link: "soon" },
+              { label: "Community Engagement", link: "soon" },
+              { label: "Sustainability", link: "soon" },
             ]}
           />
 
           <FooterColumn
             title="Company Overview"
             items={[
-              { label: "History", link: "#" },
-              { label: "Milestones", link: "#" },
-              { label: "Founding Principles", link: "#" },
-              { label: "Company Structure", link: "#" },
-              { label: "Global Presence", link: "#" },
-              { label: "Industry Recognition", link: "#" },
+              { label: "History", link: "soon" },
+              { label: "Milestones", link: "soon" },
+              { label: "Founding Principles", link: "soon" },
+              { label: "Company Structure", link: "soon" },
+              { label: "Global Presence", link: "soon" },
+              { label: "Industry Recognition", link: "soon" },
             ]}
           />
 
           <FooterColumn
             title="Financial Information"
             items={[
-              { label: "Financial Reports", link: "#" },
-              { label: "Annual Reports", link: "#" },
-              { label: "Stock Information", link: "#" },
-              { label: "IR Calendar", link: "#" },
-              { label: "SEC Filings", link: "#" },
+              { label: "Financial Reports", link: "soon" },
+              { label: "Annual Reports", link: "soon" },
+              { label: "Stock Information", link: "soon" },
+              { label: "IR Calendar", link: "soon" },
+              { label: "SEC Filings", link: "soon" },
               {
                 label: "Contact Investor Relations",
-                link: "#",
+                link: "soon",
               },
             ]}
           />
@@ -155,16 +156,24 @@ const FooterColumn = ({ title, items }) => (
 const SocialLinks = () => (
   <div className="flex justify-between items-center mt-8 border-t border-gray-700 pt-4">
     <div className="space-x-4 flex">
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.instagram.com/fixmybugtech/profilecard/?igsh=MTlpa2Q0M3pwM3N4eA=="
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaInstagram className="text-2xl hover:text-blue-500 transition-colors duration-200" />
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      {/* <a href="/soon" target="_blank" rel="noopener noreferrer">
         <FaTwitter className="text-2xl hover:text-blue-500 transition-colors duration-200" />
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      <a href="/soon" target="_blank" rel="noopener noreferrer">
         <FaFacebook className="text-2xl hover:text-blue-500 transition-colors duration-200" />
-      </a>
-      <a href="#" target="_blank" rel="noopener noreferrer">
+      </a> */}
+      <a
+        href="https://www.linkedin.com/in/-savyagupta/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaLinkedin className="text-2xl hover:text-blue-500 transition-colors duration-200" />
       </a>
     </div>
@@ -186,23 +195,23 @@ const LanguageSelector = () => (
 const CopyrightInfo = () => (
   <div className="mt-8 text-sm text-center">
     <p>&copy; 2024 FixmyBug.com, Inc. All rights reserved.</p>
-    <div className="space-x-2 flex flex-wrap mt-4">
-      <a href="#" className="hover:underline">
+    {/* <div className="space-x-2 flex flex-wrap mt-4">
+      <a href="soon" className="hover:underline">
         Terms
       </a>
-      <a href="#" className="hover:underline">
+      <a href="soon" className="hover:underline">
         Privacy
       </a>
-      <a href="#" className="hover:underline">
+      <a href="soon" className="hover:underline">
         U.S. State Privacy
       </a>
-      <a href="#" className="hover:underline">
+      <a href="soon" className="hover:underline">
         Copyright
       </a>
-      <a href="#" className="hover:underline">
+      <a href="soon" className="hover:underline">
         Cookies
       </a>
-    </div>
+    </div> */}
   </div>
 );
 

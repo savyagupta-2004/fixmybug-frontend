@@ -6,26 +6,26 @@ import ChatBotExplanation from "./ChatBotExplanation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// Initialize socket
-const socket = io("wss://fixmybug-backend.vercel.app", {
-  transports: ["websocket"], // Force WebSocket transport
-  upgrade: false,
-}); // Replace with your backend URL
-socket.on("connect", () => {
-  console.log("Connected to server", socket.id);
-});
+// // Initialize socket
+// const socket = io("wss://fixmybug-backend.vercel.app", {
+//   transports: ["websocket"], // Force WebSocket transport
+//   upgrade: false,
+// }); // Replace with your backend URL
+// socket.on("connect", () => {
+//   console.log("Connected to server", socket.id);
+// });
 
-socket.on("connect_error", (err) => {
-  console.log("Connection error:", err);
-});
+// socket.on("connect_error", (err) => {
+//   console.log("Connection error:", err);
+// });
 
-socket.on("message", (message) => {
-  console.log("Received message:", message);
-});
+// socket.on("message", (message) => {
+//   console.log("Received message:", message);
+// });
 
-socket.on("disconnect", () => {
-  console.log("Disconnected from server");
-});
+// socket.on("disconnect", () => {
+//   console.log("Disconnected from server");
+// });
 
 const ChatRoom = () => {
   const bugfixers = [
@@ -68,23 +68,23 @@ const ChatRoom = () => {
   const [currentTab, setCurrentTab] = useState("group"); // State to toggle between Group and Private Chat
   const [canEdit, setCanEdit] = useState(true); // New state to manage if the user can edit
 
-  useEffect(() => {
-    // Listen for messages from the server
-    socket.on("message", (message) => {
-      setMessages((prevMessages) => [...prevMessages, message]);
-    });
+  // useEffect(() => {
+  //   // Listen for messages from the server
+  //   socket.on("message", (message) => {
+  //     setMessages((prevMessages) => [...prevMessages, message]);
+  //   });
 
-    // Listen for previous messages when joining a room
-    socket.on("previousMessages", (previousMessages) => {
-      setMessages(previousMessages); // Set previous messages
-    });
+  //   // Listen for previous messages when joining a room
+  //   socket.on("previousMessages", (previousMessages) => {
+  //     setMessages(previousMessages); // Set previous messages
+  //   });
 
-    // Clean up on unmount
-    return () => {
-      socket.off("message");
-      socket.off("previousMessages"); // Clean up previous messages listener
-    };
-  }, []);
+  //   // Clean up on unmount
+  //   return () => {
+  //     socket.off("message");
+  //     socket.off("previousMessages"); // Clean up previous messages listener
+  //   };
+  // }, []);
 
   const joinRoom = () => {
     if (selectedTopic && user && email && consent && currentTab === "group") {

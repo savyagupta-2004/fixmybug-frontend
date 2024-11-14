@@ -75,7 +75,7 @@ const UserDetails = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-[100vh] p-8">
+      <div className="min-h-[100vh] p-8 bg-[#e6e6e6]">
         <h1 className="text-4xl text-[#0c4a6e] text-center font-bold mt-20">
           CHOOSE YOUR BUGFIXER
         </h1>

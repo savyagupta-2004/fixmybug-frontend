@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import MaintenancePage from "./Maintainenence";
 
 const LandingPage = () => {
   const [bugs, setBugs] = useState([]);
@@ -27,101 +28,101 @@ const LandingPage = () => {
         // Frontend Bugs
         {
           id: 1,
-          title: "UI Overflow Issue",
+          title: "UI Overflow Issue on Mobile",
           description: "The content overflows the container on mobile screens.",
           postedBy: "Alice Smith",
           postedDate: "2 days ago",
-          bountyAmount: 150,
+          bountyAmount: 150, // ₹150
           bountyStatus: "active",
-          category: "Docker",
+          category: "Frontend",
         },
         {
           id: 2,
-          title: "Button Click Not Responsive",
+          title: "Safari Button Click Not Responsive",
           description: "Button clicks are not being registered on Safari.",
           postedBy: "Bob Johnson",
           postedDate: "1 day ago",
-          bountyAmount: 200,
+          bountyAmount: 200, // ₹200
           bountyStatus: "active",
-          category: "Docker",
+          category: "Frontend",
         },
         {
           id: 3,
-          title: "Image Not Loading",
+          title: "Image Not Loading on Slow Networks",
           description: "Images are not loading on slow networks.",
           postedBy: "Charlie Brown",
           postedDate: "3 days ago",
-          bountyAmount: 120,
+          bountyAmount: 120, // ₹120
           bountyStatus: "active",
-          category: "SpringBoot",
+          category: "Frontend",
         },
         {
           id: 4,
-          title: "CSS Flexbox Alignment",
+          title: "Flexbox Alignment Issues in Footer",
           description: "Flexbox alignment issues in the footer.",
           postedBy: "David Wilson",
           postedDate: "1 week ago",
-          bountyAmount: 100,
+          bountyAmount: 100, // ₹100
           bountyStatus: "active",
-          category: "SpringBoot",
+          category: "Frontend",
         },
         {
           id: 5,
-          title: "Modal Not Closing",
+          title: "Modal Not Closing When Clicking Outside",
           description: "The modal does not close on clicking outside.",
           postedBy: "Eva Davis",
           postedDate: "5 days ago",
-          bountyAmount: 130,
+          bountyAmount: 130, // ₹130
           bountyStatus: "active",
-          category: "Devops",
+          category: "Frontend",
         },
         {
           id: 6,
-          title: "Form Validation Errors",
+          title: "Form Validation Messages Not Displayed",
           description: "Form validation messages are not displayed correctly.",
           postedBy: "Frank Harris",
           postedDate: "2 days ago",
-          bountyAmount: 170,
+          bountyAmount: 170, // ₹170
           bountyStatus: "active",
-          category: "Devops",
+          category: "Frontend",
         },
         {
           id: 7,
-          title: "Broken Links",
+          title: "Broken Links on Homepage",
           description: "Several links on the homepage lead to 404 errors.",
           postedBy: "Grace Martinez",
           postedDate: "4 days ago",
-          bountyAmount: 90,
+          bountyAmount: 90, // ₹90
           bountyStatus: "active",
-          category: "SRE",
+          category: "Frontend",
         },
         {
           id: 8,
-          title: "Accessibility Issues",
+          title: "Missing Alt Tags for Accessibility",
           description: "Missing alt tags on images affecting screen readers.",
           postedBy: "Hannah Moore",
           postedDate: "1 week ago",
-          bountyAmount: 200,
+          bountyAmount: 200, // ₹200
           bountyStatus: "active",
           category: "Frontend",
         },
         {
           id: 9,
-          title: "Color Contrast Issues",
+          title: "Low Contrast Ratio on Buttons",
           description: "Low contrast ratio on several buttons.",
           postedBy: "Ian Lee",
           postedDate: "3 days ago",
-          bountyAmount: 120,
+          bountyAmount: 120, // ₹120
           bountyStatus: "active",
           category: "Frontend",
         },
         {
           id: 10,
-          title: "Responsive Layout Problems",
+          title: "Responsive Layout Problems on Landscape",
           description: "Layout breaks on landscape orientation on mobile.",
           postedBy: "Jane Kim",
           postedDate: "2 weeks ago",
-          bountyAmount: 150,
+          bountyAmount: 150, // ₹150
           bountyStatus: "active",
           category: "Frontend",
         },
@@ -133,7 +134,7 @@ const LandingPage = () => {
           description: "Connection to the database times out after 30 seconds.",
           postedBy: "Kevin Walker",
           postedDate: "1 day ago",
-          bountyAmount: 300,
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
           category: "Backend",
         },
@@ -143,7 +144,7 @@ const LandingPage = () => {
           description: "API response time exceeds acceptable limits.",
           postedBy: "Laura Hall",
           postedDate: "3 days ago",
-          bountyAmount: 250,
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
           category: "Backend",
         },
@@ -153,7 +154,7 @@ const LandingPage = () => {
           description: "Incorrect data is saved to the database.",
           postedBy: "Mark Allen",
           postedDate: "2 days ago",
-          bountyAmount: 180,
+          bountyAmount: 180, // ₹180
           bountyStatus: "active",
           category: "Backend",
         },
@@ -163,7 +164,7 @@ const LandingPage = () => {
           description: "Users cannot log in due to authentication issues.",
           postedBy: "Nina Scott",
           postedDate: "1 week ago",
-          bountyAmount: 400,
+          bountyAmount: 400, // ₹400
           bountyStatus: "active",
           category: "Backend",
         },
@@ -173,7 +174,7 @@ const LandingPage = () => {
           description: "Email notifications are not being sent to users.",
           postedBy: "Oscar Young",
           postedDate: "4 days ago",
-          bountyAmount: 220,
+          bountyAmount: 220, // ₹220
           bountyStatus: "active",
           category: "Backend",
         },
@@ -183,7 +184,7 @@ const LandingPage = () => {
           description: "Sessions are expiring too quickly.",
           postedBy: "Paula Wright",
           postedDate: "3 days ago",
-          bountyAmount: 150,
+          bountyAmount: 150, // ₹150
           bountyStatus: "active",
           category: "Backend",
         },
@@ -193,7 +194,7 @@ const LandingPage = () => {
           description: "Certain resources return a 404 error.",
           postedBy: "Quincy Green",
           postedDate: "5 days ago",
-          bountyAmount: 300,
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
           category: "Backend",
         },
@@ -204,7 +205,7 @@ const LandingPage = () => {
             "Users are denied access to resources they should access.",
           postedBy: "Rita Adams",
           postedDate: "1 week ago",
-          bountyAmount: 250,
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
           category: "Backend",
         },
@@ -214,7 +215,7 @@ const LandingPage = () => {
           description: "Multiple API endpoints provide the same data.",
           postedBy: "Sam Nelson",
           postedDate: "3 days ago",
-          bountyAmount: 200,
+          bountyAmount: 200, // ₹200
           bountyStatus: "active",
           category: "Backend",
         },
@@ -224,7 +225,7 @@ const LandingPage = () => {
           description: "Data corruption detected in the database.",
           postedBy: "Tina King",
           postedDate: "2 weeks ago",
-          bountyAmount: 500,
+          bountyAmount: 500, // ₹500
           bountyStatus: "active",
           category: "Backend",
         },
@@ -236,7 +237,7 @@ const LandingPage = () => {
           description: "Deployment script fails under certain conditions.",
           postedBy: "Uma Carter",
           postedDate: "1 day ago",
-          bountyAmount: 350,
+          bountyAmount: 350, // ₹350
           bountyStatus: "active",
           category: "Deployment",
         },
@@ -246,7 +247,7 @@ const LandingPage = () => {
           description: "Environment variables not loaded in production.",
           postedBy: "Vera Wright",
           postedDate: "2 days ago",
-          bountyAmount: 250,
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
           category: "Deployment",
         },
@@ -256,7 +257,7 @@ const LandingPage = () => {
           description: "SSL certificate is about to expire.",
           postedBy: "Will Howard",
           postedDate: "3 days ago",
-          bountyAmount: 500,
+          bountyAmount: 500, // ₹500
           bountyStatus: "active",
           category: "Deployment",
         },
@@ -266,7 +267,7 @@ const LandingPage = () => {
           description: "Incorrect server configurations lead to downtime.",
           postedBy: "Xena Torres",
           postedDate: "1 week ago",
-          bountyAmount: 400,
+          bountyAmount: 400, // ₹400
           bountyStatus: "active",
           category: "Deployment",
         },
@@ -276,7 +277,7 @@ const LandingPage = () => {
           description: "Cache does not invalidate properly after updates.",
           postedBy: "Yara Foster",
           postedDate: "5 days ago",
-          bountyAmount: 300,
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
           category: "Deployment",
         },
@@ -286,7 +287,7 @@ const LandingPage = () => {
           description: "Load balancer misconfigurations cause traffic issues.",
           postedBy: "Zachary Rivera",
           postedDate: "3 days ago",
-          bountyAmount: 450,
+          bountyAmount: 450, // ₹450
           bountyStatus: "active",
           category: "Deployment",
         },
@@ -298,244 +299,237 @@ const LandingPage = () => {
           description: "Static generation fails for certain pages.",
           postedBy: "Abigail Lee",
           postedDate: "2 days ago",
-          bountyAmount: 320,
+          bountyAmount: 320, // ₹320
           bountyStatus: "active",
           category: "Nextjs",
         },
         {
           id: 28,
-          title: "Route Not Found Error",
-          description: "Dynamic routes return a 404 error.",
-          postedBy: "Benjamin Hall",
-          postedDate: "1 week ago",
-          bountyAmount: 250,
+          title: "Next.js Route Prefetching Issue",
+          description: "Route prefetching does not work for certain pages.",
+          postedBy: "Brandon Hall",
+          postedDate: "1 day ago",
+          bountyAmount: 280, // ₹280
           bountyStatus: "active",
           category: "Nextjs",
         },
         {
           id: 29,
-          title: "Image Optimization Issues",
-          description: "Images are not optimized for Next.js.",
-          postedBy: "Clara Lee",
+          title: "Next.js Image Optimization Bug",
+          description: "Next.js image optimization breaks certain images.",
+          postedBy: "Catherine Moore",
           postedDate: "3 days ago",
-          bountyAmount: 180,
+          bountyAmount: 350, // ₹350
           bountyStatus: "active",
           category: "Nextjs",
         },
         {
           id: 30,
-          title: "Internationalization Bug",
-          description: "Next.js i18n routing not functioning as expected.",
-          postedBy: "Derek Brown",
-          postedDate: "2 days ago",
-          bountyAmount: 400,
+          title: "Next.js SSR Fails After Deployment",
+          description: "SSR fails after deployment on Vercel.",
+          postedBy: "Daniel Carter",
+          postedDate: "1 week ago",
+          bountyAmount: 400, // ₹400
           bountyStatus: "active",
           category: "Nextjs",
         },
         {
           id: 31,
-          title: "API Route Timeout",
-          description: "API routes timeout unexpectedly.",
-          postedBy: "Emily White",
-          postedDate: "1 day ago",
-          bountyAmount: 220,
+          title: "Next.js API Route 404",
+          description: "API routes return 404 after deployment.",
+          postedBy: "Evelyn Scott",
+          postedDate: "2 days ago",
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
           category: "Nextjs",
         },
         {
           id: 32,
-          title: "Link Prefetching Issues",
-          description: "Links do not prefetch correctly in Next.js.",
-          postedBy: "Freddie Green",
-          postedDate: "3 days ago",
-          bountyAmount: 160,
+          title: "Next.js Static File Not Found",
+          description: "Static files are not found after deployment.",
+          postedBy: "Francis Clark",
+          postedDate: "1 day ago",
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
           category: "Nextjs",
         },
         {
           id: 33,
-          title: "Page Load Performance Issues",
-          description: "Certain pages take too long to load.",
-          postedBy: "Grace Williams",
-          postedDate: "2 weeks ago",
-          bountyAmount: 300,
+          title: "Docker Container Fails to Start Due to Missing Dependencies",
+          description:
+            "The Docker container fails to start because of missing dependencies in the image.",
+          postedBy: "Alice Green",
+          postedDate: "1 day ago",
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
-          category: "Nextjs",
+          category: "Docker",
         },
         {
           id: 34,
-          title: "Hydration Errors",
-          description: "Hydration errors occurring in specific components.",
-          postedBy: "Harry Martinez",
-          postedDate: "5 days ago",
-          bountyAmount: 400,
+          title: "Docker Compose Volumes Not Persisting Data",
+          description:
+            "Docker Compose volumes are not persisting data between container restarts.",
+          postedBy: "Bob White",
+          postedDate: "3 days ago",
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
-          category: "Nextjs",
+          category: "Docker",
         },
         {
           id: 35,
-          title: "Missing TypeScript Types",
-          description: "Missing TypeScript types in Next.js components.",
-          postedBy: "Ivy King",
+          title: "Docker Network Configuration Causing Connection Issues",
+          description:
+            "Docker container network configuration is causing connection issues between services.",
+          postedBy: "Charlie Black",
           postedDate: "2 days ago",
-          bountyAmount: 200,
+          bountyAmount: 180, // ₹180
           bountyStatus: "active",
-          category: "Nextjs",
+          category: "Docker",
         },
         {
           id: 36,
-          title: "SEO Metadata Issues",
-          description: "SEO metadata is not being generated correctly.",
-          postedBy: "Jack Carter",
-          postedDate: "1 day ago",
-          bountyAmount: 180,
+          title: "Dockerfile Caching Issues Leading to Outdated Builds",
+          description:
+            "Dockerfile caching issues are causing outdated builds to be used.",
+          postedBy: "David Brown",
+          postedDate: "4 days ago",
+          bountyAmount: 220, // ₹220
           bountyStatus: "active",
-          category: "Nextjs",
+          category: "Docker",
         },
-
-        // Additional Bugs
         {
           id: 37,
-          title: "Cross-Browser Compatibility Issue",
-          description: "UI behaves differently on Firefox compared to Chrome.",
-          postedBy: "Kara Bell",
-          postedDate: "1 day ago",
-          bountyAmount: 250,
+          title: "Spring Boot Application Crashes After Version Upgrade",
+          description:
+            "The application crashes after upgrading Spring Boot to a newer version.",
+          postedBy: "Eva Green",
+          postedDate: "2 days ago",
+          bountyAmount: 350, // ₹350
           bountyStatus: "active",
-          category: "General",
+          category: "SpringBoot",
         },
         {
           id: 38,
-          title: "Memory Leak in App",
+          title: "Spring Security Configuration Causing 403 Forbidden Errors",
           description:
-            "The app shows signs of memory leaks during heavy usage.",
-          postedBy: "Liam Scott",
-          postedDate: "2 days ago",
-          bountyAmount: 400,
+            "Incorrect Spring Security configuration is causing 403 Forbidden errors.",
+          postedBy: "Frank Lee",
+          postedDate: "3 days ago",
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
-          category: "General",
+          category: "SpringBoot",
         },
         {
           id: 39,
-          title: "Security Vulnerability Found",
-          description: "Potential XSS vulnerability in user input fields.",
-          postedBy: "Mia Adams",
-          postedDate: "3 days ago",
-          bountyAmount: 600,
+          title: "Spring Boot Async Method Not Returning Correct Value",
+          description:
+            "Asynchronous methods in Spring Boot are not returning the correct value.",
+          postedBy: "Grace Williams",
+          postedDate: "1 week ago",
+          bountyAmount: 200, // ₹200
           bountyStatus: "active",
-          category: "General",
+          category: "SpringBoot",
         },
         {
           id: 40,
-          title: "API Rate Limiting Issue",
-          description: "Rate limiting not working as intended for API calls.",
-          postedBy: "Noah Brown",
-          postedDate: "1 week ago",
-          bountyAmount: 350,
+          title: "Spring Boot Hikari Connection Pool Timeout",
+          description:
+            "Hikari connection pool is timing out in Spring Boot applications under heavy load.",
+          postedBy: "Henry Scott",
+          postedDate: "5 days ago",
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
-          category: "General",
+          category: "SpringBoot",
         },
         {
           id: 41,
-          title: "Search Functionality Bug",
+          title:
+            "CI/CD Pipeline Failing Due to Incorrect Environment Variables",
           description:
-            "Search does not return expected results under certain queries.",
-          postedBy: "Olivia Green",
-          postedDate: "1 week ago",
-          bountyAmount: 200,
+            "CI/CD pipeline fails because the environment variables are incorrectly configured in the pipeline.",
+          postedBy: "Ivy Clarke",
+          postedDate: "1 day ago",
+          bountyAmount: 350, // ₹350
           bountyStatus: "active",
-          category: "General",
+          category: "Devops",
         },
         {
           id: 42,
-          title: "Infinite Scroll Not Working",
-          description: "Infinite scroll feature does not load more content.",
-          postedBy: "Paul Harris",
-          postedDate: "2 days ago",
-          bountyAmount: 150,
+          title: "Deployment Failure Due to Missing Artifact in Repository",
+          description:
+            "Deployment fails because the required artifact is missing in the repository.",
+          postedBy: "Jake Turner",
+          postedDate: "3 days ago",
+          bountyAmount: 300, // ₹300
           bountyStatus: "active",
-          category: "General",
+          category: "Devops",
         },
         {
           id: 43,
-          title: "Form Submission Fails",
-          description: "Form submissions fail under certain conditions.",
-          postedBy: "Quincy Lee",
+          title: "Docker Image Build Fails in Jenkins Pipeline",
+          description:
+            "The Docker image build fails in the Jenkins pipeline due to a configuration issue.",
+          postedBy: "Lily Harris",
           postedDate: "2 days ago",
-          bountyAmount: 250,
+          bountyAmount: 220, // ₹220
           bountyStatus: "active",
-          category: "General",
+          category: "Devops",
         },
         {
           id: 44,
-          title: "User Interface Freeze",
-          description: "The UI freezes during heavy data operations.",
-          postedBy: "Rachel Brown",
-          postedDate: "3 days ago",
-          bountyAmount: 300,
+          title: "Kubernetes Pod CrashLoopBackOff Due to Memory Limits",
+          description:
+            "Kubernetes pods are entering CrashLoopBackOff due to insufficient memory limits set in the configuration.",
+          postedBy: "Michael Foster",
+          postedDate: "4 days ago",
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
-          category: "General",
+          category: "Devops",
         },
         {
           id: 45,
-          title: "Legacy Code Issues",
+          title:
+            "High Latency in Production Due to Misconfigured Load Balancer",
           description:
-            "Legacy code causing compatibility issues with new features.",
-          postedBy: "Sam King",
-          postedDate: "1 month ago",
-          bountyAmount: 250,
+            "Production environment experiences high latency due to misconfigured load balancer settings.",
+          postedBy: "Nina Walker",
+          postedDate: "2 days ago",
+          bountyAmount: 400, // ₹400
           bountyStatus: "active",
-          category: "General",
+          category: "SRE",
         },
         {
           id: 46,
-          title: "Localization Problems",
-          description: "Translation strings are not displaying correctly.",
-          postedBy: "Tina Martinez",
-          postedDate: "1 week ago",
-          bountyAmount: 220,
+          title: "Service Outage Due to Incorrect Auto-scaling Configuration",
+          description:
+            "A service outage occurred because the auto-scaling configuration failed to scale up in time.",
+          postedBy: "Oscar King",
+          postedDate: "1 day ago",
+          bountyAmount: 350, // ₹350
           bountyStatus: "active",
-          category: "General",
+          category: "SRE",
         },
         {
           id: 47,
-          title: "Code Refactoring Needed",
-          description: "Code needs refactoring for better maintainability.",
-          postedBy: "Uma Lee",
-          postedDate: "2 weeks ago",
-          bountyAmount: 180,
+          title: "Incorrect Alert Configuration Causing False Positives",
+          description:
+            "Incorrect alert configuration is causing false positive alerts, leading to unnecessary investigation.",
+          postedBy: "Patricia Green",
+          postedDate: "3 days ago",
+          bountyAmount: 250, // ₹250
           bountyStatus: "active",
-          category: "General",
+          category: "SRE",
         },
         {
           id: 48,
-          title: "Component Reusability Issue",
-          description: "Components are not reusable across the application.",
-          postedBy: "Victor Harris",
-          postedDate: "1 day ago",
-          bountyAmount: 240,
+          title: "Database Replica Lag Causing Data Inconsistencies",
+          description:
+            "Replica lag in the database is causing data inconsistencies in the production environment.",
+          postedBy: "Quincy Blue",
+          postedDate: "4 days ago",
+          bountyAmount: 500, // ₹500
           bountyStatus: "active",
-          category: "General",
-        },
-        {
-          id: 49,
-          title: "Error Logging Not Working",
-          description: "Error logging is not capturing all errors.",
-          postedBy: "Wendy White",
-          postedDate: "3 days ago",
-          bountyAmount: 200,
-          bountyStatus: "active",
-          category: "General",
-        },
-        {
-          id: 50,
-          title: "Legacy Browser Support",
-          description: "Issues with supporting legacy browsers.",
-          postedBy: "Xander Scott",
-          postedDate: "1 month ago",
-          bountyAmount: 300,
-          bountyStatus: "active",
-          category: "General",
+          category: "SRE",
         },
       ]);
     }, []);
@@ -628,76 +622,80 @@ const LandingPage = () => {
     const handleMouseLeave = () => setIsHovered(false);
 
     return (
-      <div
-        className="relative p-4 gap-2 hover:shadow-lg transition-shadow duration-300 ease-in-out w-[16rem] h-[15rem] flex flex-col justify-between cursor-pointer"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <motion.div
-          initial={{ scale: 1 }}
-          animate={isHovered ? { scale: 1.05 } : { scale: 1 }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
-          className="bg-white p-4 gap-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out w-[16rem] h-[15rem] flex flex-col justify-between"
+      <>
+        <div
+          className="relative p-4 gap-2  hover:shadow-lg transition-shadow duration-300 ease-in-out w-[16rem] h-[15rem] flex flex-col justify-between cursor-pointer"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <h3 className="text-xl font-semibold text-gray-900 mb-2 truncate">
-            {bug.title}
-          </h3>
-          <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-            {bug.description.substring(0, 120)}...
-          </p>
-          <div className="flex justify-between items-center mt-4">
-            <span className="text-green-600 font-semibold">
-              ${bug.bountyAmount}
-            </span>
-            <span
-              className={`badge ${bug.bountyStatus.toLowerCase()} bg-opacity-50 backdrop-blur-sm`}
-            >
-              {bug.bountyStatus.charAt(0).toUpperCase() +
-                bug.bountyStatus.slice(1)}
-            </span>
-          </div>
-          <div className="mt-auto px-4 pb-2 flex space-x-4 items-center">
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 ease-in-out hidden">
-              Learn More
-            </button>
-            <div className="flex space-x-2 items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-blue-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+          <motion.div
+            initial={{ scale: 1 }}
+            animate={isHovered ? { scale: 1.05 } : { scale: 1 }}
+            transition={{ type: "spring", stiffness: 260, damping: 20 }}
+            className="bg-white  p-4 gap-2 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out w-[16rem] h-[15rem] flex flex-col justify-between"
+          >
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 truncate">
+              {bug.title}
+            </h3>
+            <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+              {bug.description.substring(0, 120)}...
+            </p>
+            <div className="flex justify-between items-center mt-4">
+              <span className="text-green-600 font-semibold">
+                ₹{bug.bountyAmount}
+              </span>
+              <span
+                className={`badge ${bug.bountyStatus.toLowerCase()} bg-opacity-50 backdrop-blur-sm`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 19v-6l3-3m3 3l3 3-3 3m-3-3v6"
-                />
-              </svg>
-              <span className="text-xs text-gray-600">Open Source</span>
+                {bug.bountyStatus.charAt(0).toUpperCase() +
+                  bug.bountyStatus.slice(1)}
+              </span>
             </div>
+            <div className="mt-auto px-4 pb-2 flex space-x-4 items-center">
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 ease-in-out hidden">
+                Learn More
+              </button>
+              <div className="flex space-x-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-blue-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 19v-6l3-3m3 3l3 3-3 3m-3-3v6"
+                  />
+                </svg>
+                <span className="text-xs text-gray-600">Open Source</span>
+              </div>
 
-            <div className="flex space-x-2 items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-yellow-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 19v-6l3-3m3 3l3 3-3 3m-3-3v6"
-                />
-              </svg>
-              <span className="text-xs text-gray-600">Community Supported</span>
+              <div className="flex space-x-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-yellow-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 19v-6l3-3m3 3l3 3-3 3m-3-3v6"
+                  />
+                </svg>
+                <span className="text-xs text-gray-600">
+                  Community Supported
+                </span>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      </>
     );
   };
 
@@ -766,7 +764,8 @@ const LandingPage = () => {
       className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-200 flex flex-col"
     >
       <Navbar />
-      <main className="flex-grow flex flex-col items-center justify-center p-8 mt-20">
+      <MaintenancePage></MaintenancePage>
+      <main className="flex-grow flex flex-col items-center justify-center p-8 ">
         <p className="text-lg text-gray-700 mb-12 max-w-3xl text-center">
           Connect with a community of developers to find, fix, and get rewarded
           for bugs on websites and applications.
